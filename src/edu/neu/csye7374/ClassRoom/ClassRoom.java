@@ -21,7 +21,7 @@ public class ClassRoom implements IClassRoom{
         this.students = students;
     }
 
-    private HashMap<State, List<Student>>  studentList;
+    private HashMap<String, List<Student>>  studentList;
 
 
     public ClassRoom(int size){
@@ -49,10 +49,19 @@ public class ClassRoom implements IClassRoom{
     public void addStudent(Student student) {
         String state = student.getState().getClass().getName();
 
-        String[] temp = (student.getState().getClass().getName()).split(".");
-       // String state = temp[temp.length - 1];
         System.out.println(state);
-        //if(studentList.containsKey())
+        if(!studentList.containsKey(student.getState().getName())){
+            List<Student> tempList = new ArrayList<>();
+            tempList.add(student);
+            studentList.put(student.getState().getName(), tempList);
+        }
+        else{
+            List<Student> tempList = studentList.get(student.getState().getName());
+            tempList.add(student);
+            studentList.remove(student.getState().getName());
+            studentList.put(student.getState().getName(), tempList);
+
+        }
         students.add(student);
 
     }

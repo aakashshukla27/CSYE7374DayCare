@@ -1,7 +1,9 @@
 package edu.neu.csye7374.ClassRoom;
 
 import edu.neu.csye7374.Person.Student;
+import edu.neu.csye7374.Person.Teacher;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class ClassRoomHelper {
@@ -11,6 +13,92 @@ public class ClassRoomHelper {
     private final int category4Count = 3;
     private final int category5Count = 2;
     private final int category6Count = 2;
+    List<Student> students;
+    public void canAdd(ClassRoom classRoom, HashMap<String, List<Student>>  studentList, Student student, List<Teacher> teachers){
+        switch (student.getState().getName()){
+            case "Category1":
+
+                if(classRoom.isFull()) {
+                    // cannot add more
+                }
+                students = studentList.get("Category1");
+                if(students.size() > 12) {
+                    // cannot add more
+                }
+                else{
+                    classRoom.addStudent(student);
+                }
+                break;
+            case "Category2":
+                if(classRoom.isFull()) {
+                    // cannot add more
+                }
+                students = studentList.get("Category2");
+                if(students.size() > 12) {
+                    // cannot add more
+                }
+                else{
+                    classRoom.addStudent(student);
+                    student.setClassRoom(classRoom);
+                }
+                break;
+            case "Category3":
+                if(classRoom.isFull()) {
+                    // cannot add more
+                }
+                students = studentList.get("Category3");
+                if(students.size() > 12) {
+                    // cannot add more
+                }
+                else{
+                    classRoom.addStudent(student);
+                    student.setClassRoom(classRoom);
+                }
+                break;
+            case "Category4":
+                if(classRoom.isFull()) {
+                    // cannot add more
+                }
+                students = studentList.get("Category4");
+                if(students.size() > 12) {
+                    // cannot add more
+                }
+                else{
+                    classRoom.addStudent(student);
+                    student.setClassRoom(classRoom);
+                }
+                break;
+            case "Category5":
+                if(classRoom.isFull()) {
+                    // cannot add more
+                }
+                students = studentList.get("Category5");
+                if(students.size() > 12) {
+                    // cannot add more
+                }
+                else{
+                    classRoom.addStudent(student);
+                    student.setClassRoom(classRoom);
+                }
+                break;
+            case "Category6":
+                if(classRoom.isFull()) {
+                    // cannot add more
+                }
+                students = studentList.get("Category6");
+                if(students.size() > 12) {
+                    // cannot add more
+                }
+                else{
+                    classRoom.addStudent(student);
+                    student.setClassRoom(classRoom);
+                }
+                break;
+
+        }
+
+    }
+
 
     public String AssignClassRoom(List<ClassRoom> classRooms, Student student){
         for(ClassRoom classRoom : classRooms){

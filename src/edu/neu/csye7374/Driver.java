@@ -18,6 +18,7 @@ public class Driver {
 
 
         Student s1 = new Student("John Doe", new Date(), 15, new Date(), "Parent Name", "Address 1", "12345");
+        System.out.println(s1.getState().getName());
         Student s2 = new Student("Michael Doe", new Date(), 15, new Date(), "Parent Name", "Address 2", "12345");
         Teacher t1 = new Teacher("Teacher 1", new Date(), 35, new Date(), 10);
 
