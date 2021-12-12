@@ -13,4 +13,7 @@ public class BirthdayService {
             }
         }
     }
+    public void notifyWorkAnniversary(List<Person> masterList){
+
+    }
 }

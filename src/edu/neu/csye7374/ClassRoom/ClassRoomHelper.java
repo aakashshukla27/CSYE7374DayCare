@@ -34,7 +34,7 @@ public class ClassRoomHelper {
                     // cannot add more
                 }
                 students = studentList.get("Category2");
-                if(students.size() > 12) {
+                if(students.size() > 15) {
                     // cannot add more
                 }
                 else{
@@ -47,7 +47,7 @@ public class ClassRoomHelper {
                     // cannot add more
                 }
                 students = studentList.get("Category3");
-                if(students.size() > 12) {
+                if(students.size() > 18) {
                     // cannot add more
                 }
                 else{
@@ -60,7 +60,7 @@ public class ClassRoomHelper {
                     // cannot add more
                 }
                 students = studentList.get("Category4");
-                if(students.size() > 12) {
+                if(students.size() > 24) {
                     // cannot add more
                 }
                 else{
@@ -73,7 +73,7 @@ public class ClassRoomHelper {
                     // cannot add more
                 }
                 students = studentList.get("Category5");
-                if(students.size() > 12) {
+                if(students.size() > 24) {
                     // cannot add more
                 }
                 else{
@@ -86,7 +86,7 @@ public class ClassRoomHelper {
                     // cannot add more
                 }
                 students = studentList.get("Category6");
-                if(students.size() > 12) {
+                if(students.size() > 30) {
                     // cannot add more
                 }
                 else{
@@ -94,7 +94,6 @@ public class ClassRoomHelper {
                     student.setClassRoom(classRoom);
                 }
                 break;
-
         }
 
     }
